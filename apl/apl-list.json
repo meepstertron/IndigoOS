@@ -1,0 +1,15 @@
+{
+    "version": 1.1,
+    "name": "IndigoApl",
+    "description": "The official apl catalouge for indigo",
+    "author": "meepstertron",
+    "applications": [
+        {
+            "name": "hello-world",
+            "description": "A simple hello world application",
+            "location": "https://raw.githubusercontent.com/meepstertron/IndigoOS/main/apl/hello-world",
+            "version": 1
+        }
+    ]
+
+}
