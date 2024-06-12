@@ -8,13 +8,15 @@
             "name": "hello-world",
             "description": "A simple hello world application",
             "location": "https://raw.githubusercontent.com/meepstertron/IndigoOS/main/apl/hello-world",
-            "version": 1
+            "version": 1,
+            "os": "indigo"
         },
         {
             "name": "KeepCmdSmall",
             "description": "Keeps the cmd small and optionally logs it to reduce list size and lag",
             "location": "https://raw.githubusercontent.com/meepstertron/IndigoOS/main/apl/KCS",
-            "version": 1
+            "version": 1,
+            "os": "indigo"
         }
         
     ]
