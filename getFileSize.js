@@ -1,27 +1,28 @@
 class FileSize {
-  getInfo() {
-    return {
-      id: 'filesize',
-      name: 'FileSize',
-      blocks: [
-        {
-          opcode: 'getByteSize',
-          blockType: Scratch.BlockType.REPORTER,
-          text: '[ONE] Get Size In bytes',
-          arguments: {
-            ONE: {
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: ':3'
+    getInfo() {
+      return {
+        id: 'filesize',
+        name: 'FileSize',
+        blocks: [
+          {
+            opcode: 'getByteSize',
+            blockType: Scratch.BlockType.REPORTER,
+            text: '[ONE] Get Size In bytes',
+            arguments: {
+              ONE: {
+                type: Scratch.ArgumentType.STRING,
+                defaultValue: ':3'
+              }
             }
           }
-        }
-      ]
-    };
+        ]
+      };
+    }
+  
+    getByteSize(args) {
+        const textEncoder = new TextEncoder();
+      return String(textEncoder.encode(String(args.ONE)).length);
+    }
   }
-
-  getByteSize(args) {
-    return String(byteSize(new Blob([args.ONE]).size));
-  }
-}
-
-Scratch.extensions.register(new FileSize());
+  
+  Scratch.extensions.register(new FileSize());
